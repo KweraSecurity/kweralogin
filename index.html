@@ -137,6 +137,20 @@
       50% { opacity: 1; }
       100% { opacity: 0; }
     }
+
+    /* Style for the about link */
+    .about-link {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 14px;
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .about-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -161,6 +175,8 @@
       <textarea id="verificationKey" rows="4" readonly></textarea>
     </div>
   </div>
+  <!-- About link -->
+  <a class="about-link" href="https://kwerasecurity.github.io/about/" target="_blank">About</a>
   <script>
     function handleLogin(event) {
       event.preventDefault();

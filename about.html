@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Kwera Bot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      background-color: rgba(15, 15, 20, 0.9); /* Dark mode black with some transparency */
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      color: #ccc;
+    }
+
+    .footer {
+      margin-top: 40px;
+      color: #ccc;
+    }
+
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 50%;
+      animation: twinkle 1.5s infinite;
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars">
+    <!-- Generate stars dynamically using JavaScript -->
+  </div>
+  <div class="container">
+    <h2>About Kwera Bot</h2>
+    <p>Kwera Bot is a versatile Discord bot designed to enhance your server experience. It offers various features including moderation commands, verification system, fun commands, and customizable settings.</p>
+    <ul>
+      <li>Moderation commands</li>
+      <li>Verification system</li>
+      <li>Fun commands</li>
+      <li>Customizable settings</li>
+    </ul>
+    <p>Developed by [Your Name]</p>
+    <div class="footer">Powered by Discord.py</div>
+  </div>
+  <script>
+    // Generate stars dynamically
+    const starsContainer = document.querySelector('.stars');
+    const numStars = 200;
+
+    for (let i = 0; i < numStars; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = Math.random() * 100 + 'vh';
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.animationDuration = Math.random() * 1.5 + 0.5 + 's';
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>
